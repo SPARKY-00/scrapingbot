@@ -1,0 +1,18 @@
+{
+      "name": "Scraper",
+      "description": "A Powerful  Telegram Bot'.",
+      "keywords": [
+         "telegram"
+      ],
+    
+   "logo": "https://telegra.ph/file/3aacd6c0cfe8c852e43c0.jpg",  
+   "repository": "https://github.com/SPARKY-00/scrapingbot",
+
+   "env": {
+      "TOKEN": {
+         "description": "Your bot token. Get one from @BotFather duh",
+         "required": false,
+         "value": ""
+      }
+   }
+}
