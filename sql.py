@@ -1,10 +1,3 @@
-#  !/usr/bin/env python3
-#  -*- coding: utf-8 -*-
-#  Name     : broadcast-bot [ Telegram ]
-#  Repo     : https://github.com/m4mallu/broadcast-bot
-#  Author   : Renjith Mangal [ https://t.me/space4renjith ]
-#  Licence  : GPL-3
-
 import os
 import threading
 from sqlalchemy import create_engine
@@ -13,7 +6,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, scoped_session
 
 def start() -> scoped_session:
-    engine = create_engine("postgres://ykfmxfem:Pm3VDsQXsWt8c0hbaPUYdM9bGNgtMPjl@fanny.db.elephantsql.com/ykfmxfem", client_encoding="utf8")
+    engine = create_engine("postgres://wqzluaus:LpzNBkTHG0uQ8AESTBROXwr9O5wAWKCt@hansken.db.elephantsql.com/wqzluaus", client_encoding="utf8")
     BASE.metadata.bind = engine
     BASE.metadata.create_all(engine)
     return scoped_session(sessionmaker(bind=engine, autoflush=False))
