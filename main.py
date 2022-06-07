@@ -347,14 +347,16 @@ async def start(lel, message):
 
 # ------------------------------- Start --------------------------------- #
 @app.on_message(filters.private & filters.command(["remove"]))
+async def start(lel, message):
+ try:
    if message.from_user.id not in PREMIUM:
-      await app.send_message(message.chat.id, f"**You are no Longer a Premium User\nPlease have a Subscripton\n200rs per Month\nDm @InducedSellers\n\nMade with ❤️ By @SPA4KY**")
+      await app.send_message(message.chat.id, f"**You are no Longer a Premium User\nPlease have a Subscripton\n200rs per Month\nDm @InducedSellers\n\nMade with ❤️ By @InducedBots**")
       return
    try:
       with open(f"Users/{message.from_user.id}/phone.csv", 'r')as f:
          str_list = [row[0] for row in csv.reader(f)]
          f.closed
-         number = await app.ask(chat_id=message.chat.id, text="**Send Number to remove\n\nMade with ❤️ By @SPA4KY**")
+         number = await app.ask(chat_id=message.chat.id, text="**Send Number to remove\n\nMade with ❤️ By @InducedBots**")
          print(str_list)
          str_list.remove(number.text)
          with open(f"Users/{message.from_user.id}/1.csv", 'w', encoding='UTF-8') as writeFile:
@@ -367,7 +369,7 @@ async def start(lel, message):
    except Exception as a:
       pass
  except Exception as e:
-   await app.send_message(message.chat.id, f"**Error: {e}\n\nMade with ❤️ By @SPA4KY**")
+   await app.send_message(message.chat.id, f"**Error: {e}\n\nMade with ❤️ By @InducedBots**")
    return
 
 # ------------------------------- Admin Pannel --------------------------------- #
