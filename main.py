@@ -204,10 +204,6 @@ async def login(lel, message):
 @app.on_message(filters.private & filters.command(["login"]))
 async def login(lel, message):
  try:
-   await message.delete()
-   a= await Subscribe(lel, message)
-   if a==1:
-      return
    if message.from_user.id not in PREMIUM:
       await app.send_message(message.chat.id, f"**You are no Longer a Premium User\nPlease have a Subscripton\n200rs per Month\nDm @InducedSellers\n\nMade with ❤️ By @InducedBots**")
       return
@@ -317,9 +313,6 @@ async def login(lel, message):
 @app.on_message(filters.private & filters.command(["adding"]))
 async def to(lel, message):
  try:
-   a= await Subscribe(lel, message)
-   if a==1:
-      return
    if message.from_user.id not in PREMIUM:
       await app.send_message(message.chat.id, f"**You are no Longer a Premium User\nPlease have a Subscripton\n200rs per Month\nDm @InducedSellers\n\nMade with ❤️ By @InducedBots**")
       return
