@@ -197,28 +197,7 @@ async def login(lel, message):
          stats='you are limited'
          l.append(str(phone))
       me = await client.get_me()
-      await app.send_message(message.chat.id, f"Login Successfully✅ Done.\n\n**Name:** {me.first_name}\n**Username:** {me.username}\n**Phone:** {phone}\n**SpamBot Stats:** {stats}\n\n**Made with ❤️ By @SPA4KY**")     
-      po+=1
-      await client.disconnect()
-     except ConnectionError:
-      await client.disconnect()
-      await client.connect()
-     except TypeError:
-      await app.send_message(message.chat.id, "**You have not enter the phone number \nplease edit Config⚙️ by camand /start.\n\nMade with ❤️ By @SPA4KY**")  
-     except Exception as e:
-      await app.send_message(message.chat.id, f"**Error: {e}\n\nMade with ❤️ By @SPA4KY**")
-    for ish in l:
-      r.append(str(ish))
-    with open(f"Users/{message.from_user.id}/1.csv", 'w', encoding='UTF-8') as writeFile:
-      writer = csv.writer(writeFile, lineterminator="\n")
-      writer.writerows(r)
-    with open(f"Users/{message.from_user.id}/1.csv") as infile, open(f"Users/{message.from_user.id}/phone.csv", "w") as outfile:
-      for line in infile:
-         outfile.write(line.replace(",", "")) 
-    await app.send_message(message.chat.id, f"**All Acc Login {s} Account Available of {po} \n\nMade with ❤️ By @SPA4KY**") 
- except Exception as e:
-   await app.send_message(message.chat.id, f"**Error: {e}\n\nMade with ❤️ By @SPA4KY**")
-   return
+      await app.send_message(message.chat.id, f"Login Successfully✅ Done.\n\n**Name:** {me.first_name}\n**Username:** {me.username}\n**Phone:** {phone}\n**SpamBot Stats:** {stats}\n\n**Made with ❤️ By @SPA4KY**")
                           
 
 
