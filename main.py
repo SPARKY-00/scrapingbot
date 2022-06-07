@@ -198,7 +198,6 @@ async def login(lel, message):
          l.append(str(phone))
       me = await client.get_me()
       await app.send_message(message.chat.id, f"Login Successfully✅ Done.\n\n**Name:** {me.first_name}\n**Username:** {me.username}\n**Phone:** {phone}\n**SpamBot Stats:** {stats}\n\n**Made with ❤️ By @SPA4KY**")
-                          
 
 
 # ------------------------------- Acc Private Adding --------------------------------- #
